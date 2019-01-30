@@ -40,10 +40,8 @@
 	</div>
 	<script>
 		window.onload = function(){
-			var outerDiv = document.getElementById("outerDiv");
-			var element = document.createElement("article");
+			var element = document.getElementById("outerDiv").appendChild(document.createElement("article"));
 			element.innerText = "My new <article> element";
-			outerDiv.appendChild(element);
 		}
 	</script>
 </body>
