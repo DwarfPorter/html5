@@ -40,11 +40,8 @@
 	</div>
 	<script>
 		window.onload = function(){
-			var element = document.getElementById("innerDiv");
-			alert(element.innerHTML);
-			document.removeChild(element);
-			var afterRemove = document.getElementById("innerDiv");
-			alert(afterRemove);
+			var element = document.createElement("article");
+			element.innerText = "My new <article> element";
 		}
 	</script>
 </body>
