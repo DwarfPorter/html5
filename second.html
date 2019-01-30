@@ -40,8 +40,8 @@
 	</div>
 	<script>
 		window.onload = function(){
-			var paragraphs = document.getElementsByClassName("subPara");
-			alert("<p> elements with class subPara: " + paragraphs.length);
+			var paragraphs = document.querySelectorAll("p");
+			alert("<p> elements: " + paragraphs.length);
 		}
 	</script>
 </body>
