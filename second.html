@@ -40,8 +40,11 @@
 	</div>
 	<script>
 		window.onload = function(){
-			var paragraph = document.querySelector("#outerDiv");
-			alert("<p> elements: " + paragraph.innerHTML);
+			var element = document.getElementById("innerDiv");
+			alert(element.innerHTML);
+			document.removeChild(element);
+			var afterRemove = document.getElementById("innerDiv");
+			alert(afterRemove);
 		}
 	</script>
 </body>
