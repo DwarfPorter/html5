@@ -41,8 +41,7 @@
 	<script>
 		window.onload = function(){
 			var inner = document.getElementById("innerDiv");
-			var element = inner.insertBefore(document.createElement("article"), inner.firstChild);
-			element.innerText = "My new <article> element!";
+			var p = inner.removeChild(document.getElementById("P1"));
 		}
 	</script>
 </body>
