@@ -40,8 +40,9 @@
 	</div>
 	<script>
 		window.onload = function(){
-			var element = document.getElementById("outerDiv").insertBefore(document.createElement("article"), document.getElementById("innerDiv"));
-			element.innerText = "My new <article> element";
+			var inner = document.getElementById("innerDiv");
+			var element = inner.insertBefore(document.createElement("article"), inner.firstChild);
+			element.innerText = "My new <article> element!";
 		}
 	</script>
 </body>
