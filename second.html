@@ -41,7 +41,14 @@
 	<script>
 		window.onload = function(){
 			var inner = document.getElementById("innerDiv");
-			inner.removeNode(true);
+			var newDiv = document.createElement("div");
+			for (var i=0; i<inner.childNodes.length; i++){
+				var anchor = newDiv.appendChild(document.createElement("a"));
+				anchor.setAttribute("href", "http://www.bing.ru");
+				anchor.text = inner.childNodes[i].textContent;
+				newDiv.appendChild(document.createElement("br"));
+			}
+			inner.replaceNode(newDiv);
 		}
 	</script>
 </body>
