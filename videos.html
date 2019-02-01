@@ -2,7 +2,30 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Video</title>
+    <title>Video</title>
+    <style>
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var video;
+        window.onload = function(){
+            video = document.getElementById("sampleVideo");
+        }
+
+        function play(){
+            video.play();
+        }
+
+        function pause(){
+            video.pause();
+        }
+
+        function back(){
+            video.currentTime = -1;
+        }
+    </script>
 </head>
 <body>
 	<header>
@@ -13,13 +36,29 @@
             <h2>video hello</h2>
         </header>
         <section>
-            <video controls height="400" width="600">
-                <source src="SayHello.mp4" type="video/mp4"/>
-                <source src="dlg11.mp3" type="audio/mp3"/>
-                <object>
-                    <p>Video is not supported your browser!</p>
-                </object>
-            </video>
+            <table>
+                <tr>
+                    <td colspan="3">
+                        <video id="sampleVideo" height="400" width="600">
+                            <source src="SayHello.mp4" type="video/mp4"/>
+                            <object>
+                                <p>Video is not supported your browser!</p>
+                            </object>
+                        </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="backButton" src="orange.jpg" onclick="back();"/>
+                    </td>
+                    <td>
+                        <img id="playButton" src="orange.jpg" onclick="play();"/>
+                    </td>
+                    <td>
+                        <img id="pauseButton" src="orange.jpg" onclick="pause();"/>
+                    </td>
+                </tr>
+            </table>
         </section>
     </article>
 </body>
