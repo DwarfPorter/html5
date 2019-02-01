@@ -9,22 +9,31 @@
         }
     </style>
     <script>
-        var video;
+        var player;
+        var playerFunctionsClass = function(video){
+            function play(){
+                video.play();
+            }
+
+            function pause(){
+                video.pause();
+            }
+
+            function back(){
+                video.currentTime -= 10;
+            }
+
+            return {
+                play: play,
+                pause: pause,
+                back: back
+            }
+        };
+
         window.onload = function(){
-            video = document.getElementById("sampleVideo");
+            player = playerFunctionsClass(document.getElementById("sampleVideo"));
         }
 
-        function play(){
-            video.play();
-        }
-
-        function pause(){
-            video.pause();
-        }
-
-        function back(){
-            video.currentTime = -1;
-        }
     </script>
 </head>
 <body>
@@ -49,13 +58,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <img id="backButton" src="orange.jpg" onclick="back();"/>
+                        <img id="backButton" src="orange.jpg" onclick="player.back();"/>
                     </td>
                     <td>
-                        <img id="playButton" src="orange.jpg" onclick="play();"/>
+                        <img id="playButton" src="orange.jpg" onclick="player.play();"/>
                     </td>
                     <td>
-                        <img id="pauseButton" src="orange.jpg" onclick="pause();"/>
+                        <img id="pauseButton" src="orange.jpg" onclick="player.pause();"/>
                     </td>
                 </tr>
             </table>
