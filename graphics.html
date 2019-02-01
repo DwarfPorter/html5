@@ -19,8 +19,8 @@
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
-            ctxt.moveTo(10,380);
-            ctxt.quadraticCurveTo(300, -250, 580, 380);
+            ctxt.moveTo(125,20);
+            ctxt.bezierCurveTo(0, 200, 300, 300, 50, 400);
             ctxt.lineWidth = 25;
             ctxt.strokeStyle = '#f00';
             ctxt.stroke();
