@@ -17,6 +17,11 @@
         window.onload = function(){
             var drawingSurface = document.getElementById("drawingSurface");
             var ctxt = drawingSurface.getContext("2d");
+
+            ctxt.beginPath();
+            ctxt.moveTo(10, 10);
+            ctxt.lineTo(255, 350);
+            ctxt.stroke();
         }
     </script>
 </body>
