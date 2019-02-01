@@ -19,10 +19,13 @@
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
-            ctxt.moveTo(125,20);
-            ctxt.bezierCurveTo(0, 200, 300, 300, 50, 400);
-            ctxt.lineWidth = 25;
-            ctxt.strokeStyle = '#f00';
+            ctxt.arc(300,200,75,1.75*Math.PI,1.25*Math.PI, false);
+            ctxt.lineTo(150, 125);
+            ctxt.quadraticCurveTo(300, 0, 450, 125);
+            ctxt.lineTo(353, 144);
+            ctxt.lineWidth = 10;
+            ctxt.strokeStyle = 'blue';
+            ctxt.lineCap = "round";
             ctxt.stroke();
         }
     </script>
