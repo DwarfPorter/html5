@@ -17,14 +17,10 @@
         window.onload = function(){
             var drawingSurface = document.getElementById("drawingSurface");
             var ctxt = drawingSurface.getContext("2d");
-            ctxt.lineWidth = 3;
-            ctxt.rect(150, 150, 200, 125);
             var img = new Image();
             img.src = "orange.jpg"
             img.onload = function(){
-                var pat = ctxt.createPattern(img, "repeat");
-                ctxt.fillStyle = pat;
-                ctxt.fill();
+                ctxt.drawImage(img, 0, 0);
                 ctxt.stroke();
             }
         }
