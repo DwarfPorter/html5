@@ -19,19 +19,10 @@
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
-            ctxt.arc(300,200,75,1.75*Math.PI,1.25*Math.PI, false);
-            ctxt.lineTo(150, 125);
-            ctxt.quadraticCurveTo(300, 0, 450, 125);
-            ctxt.lineTo(353, 144);
-            ctxt.lineWidth = 10;
-            ctxt.strokeStyle = 'blue';
-            ctxt.lineCap = "round";
-            ctxt.fillStyle="Green";
-            ctxt.fill();
-            ctxt.stroke();
-
-            ctxt.beginPath();
-            ctxt.rect(400, 200, 150, 75);
+            var x, y;
+            x = 150;
+            y = 75;
+            ctxt.rect(300-(x/2), 200-(y/2), x, y);
             ctxt.lineWidth = 1;
             ctxt.strokeStyle = 'black';
             ctxt.stroke();
