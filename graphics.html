@@ -20,7 +20,7 @@
             var img = new Image();
             img.src = "orange.jpg"
             img.onload = function(){
-                ctxt.drawImage(img, 0, 0);
+                ctxt.drawImage(img, 0, 0, img.width*.5, img.height*.5);
                 ctxt.stroke();
             }
         }
