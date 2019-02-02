@@ -19,15 +19,12 @@
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
-            var x, y;
-            x = 150;
-            y = 75;
-            ctxt.rect(300-(x/2), 200-(y/2), x, y);
-            var gradient = ctxt.createLinearGradient(300-(x/2), 200-(y/2), x, y);
+            ctxt.rect(150, 150, 200, 125);
+            var gradient = ctxt.createLinearGradient(150, 150, 200, 125);
             gradient.addColorStop(0, 'Black');
             gradient.addColorStop(0.5, 'Gray');
             gradient.addColorStop(1, 'white');
-            ctxt.fillStyle = "gradient";
+            ctxt.fillStyle = gradient;
             ctxt.fill();
             ctxt.stroke();
         }
