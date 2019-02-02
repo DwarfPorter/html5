@@ -17,12 +17,19 @@
         window.onload = function(){
             var drawingSurface = document.getElementById("drawingSurface");
             var ctxt = drawingSurface.getContext("2d");
-            var img = new Image();
-            img.src = "orange.jpg"
-            img.onload = function(){
-                ctxt.drawImage(img, 0, 0, img.width*.5, img.height*.5);
-                ctxt.stroke();
-            }
+            ctxt.strokeText("1. Text with default font", 100, 100);
+            ctxt.font = "24px arial";
+            ctxt.strokeText("2. Text with arial font", 100, 125);
+            ctxt.font = "24px arial";
+            ctxt.strokeStyle = "red";
+            ctxt.strokeText("3. Text with arial font and red color", 100, 160);
+            ctxt.font = "24px arial";
+            ctxt.fillStyle = "red";
+            ctxt.fillText("4. Text with arial font and red color", 100, 180);
+            ctxt.font = "24px arial";
+            ctxt.fillStyle = "red";
+            ctxt.textAlign = 'center';
+            ctxt.fillText("5. Text with arial font and red color at center", drawingSurface.width/2, drawingSurface.height/2);
         }
     </script>
 </body>
