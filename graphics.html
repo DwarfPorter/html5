@@ -23,9 +23,11 @@
             x = 150;
             y = 75;
             ctxt.rect(300-(x/2), 200-(y/2), x, y);
-            ctxt.lineWidth = 1;
-            ctxt.strokeStyle = 'black';
-            ctxt.fillStyle = "blue";
+            var gradient = ctxt.createLinearGradient(300-(x/2), 200-(y/2), x, y);
+            gradient.addColorStop(0, 'Black');
+            gradient.addColorStop(0.5, 'Gray');
+            gradient.addColorStop(1, 'white');
+            ctxt.fillStyle = "gradient";
             ctxt.fill();
             ctxt.stroke();
         }
