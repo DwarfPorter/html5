@@ -4,16 +4,35 @@
     <title>Game Ball</title>
 </head>
 <body>
-    <svg>
-        <circle id="circle" cx="50" cy="50" r="50" fill="green"/>
+    <svg id="graphics" width='800' height='400'>
+        <circle class="circle" cx="50" cy="50" r="50" fill="green" onclick="splitBall()"/>
+        <circle class="circle" cx="50" cy="50" r="30" fill="red" onclick="splitBall()"/>
     </svg>
     <script>
         setInterval(function(){
-            var circle = document.getElementById("circle");
-            var x = circle.getAttribute("cx");
-            x++;
-            circle.setAttribute("cx", x);
+            var circles = document.getElementsByClassName("circle");
+            for(var i=0; i < circles.length; i++){
+                var circle = circles[i];
+                var x = circle.getAttribute("cx");
+                x++;
+                circle.setAttribute("cx", x);
+            }
         }, 30);
+        function splitBall(){
+            var circles = document.getElementsByClassName("circle");
+            var radius = circles[0].getAttribute("r");
+            var cx = circles[0].getAttribute("cx");
+            radius /= 2
+            circles[0].setAttribute("r", radius);
+            var circle2 =  document.createElement("circle");
+            circle2.setAttribute("class", "circle");
+            circle2.setAttribute("cx", cx);
+            circle2.setAttribute("cy", "75");
+            circle2.setAttribute("fill", "red");
+            circle2.setAttribute("r", radius);
+            var svg = document.getElementById("graphics");
+            svg.appendChild(circle2);
+        }
     </script>
 </body>
 </html>
