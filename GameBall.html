@@ -8,14 +8,12 @@
         <circle id="circle" cx="50" cy="50" r="50" fill="green"/>
     </svg>
     <script>
-        window.onload = function(){
+        setInterval(function(){
             var circle = document.getElementById("circle");
-            setInterval(function(){
-                var x = circle.getAttribute("cx");
-                x++;
-                circle.setAttribute("cx", x);
-            }, 30);
-        }
+            var x = circle.getAttribute("cx");
+            x++;
+            circle.setAttribute("cx", x);
+        }, 30);
     </script>
 </body>
 </html>
