@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Ball</title>
+</head>
+<body>
+    <svg>
+        <circle id="circle" cx="50" cy="50" r="50" fill="green"/>
+    </svg>
+    <script>
+        window.onload = function(){
+            var circle = document.getElementById("circle");
+            setInterval(function(){
+                var x = circle.getAttribute("cx");
+                x++;
+                circle.setAttribute("cx", x);
+            }, 30);
+        }
+    </script>
+</body>
+</html>
