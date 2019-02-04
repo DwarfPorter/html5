@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        #orange1{
+            height:150px;
+            width:225px;
+        }
+        .trans{
+            transform: scale(2);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            document.getElementById("orange1").onclick = function(){
+                this.classList.add("trans");
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="orange.jpg" id="orange1" style="position: relative"/>
+</body>
+</html>
