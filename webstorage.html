@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            section{
+                margin-top: 15px;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                document.getElementById("btnAdd").onclick = function(){
+
+                }
+
+                document.getElementById("btnRemove").onclick=function(){
+
+                }
+
+                document.getElementById("btnClear").onclick=function(){
+
+                }
+
+                function LoadFromStorage(){
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            Key:
+            <input type="text" id="toStorageKey"/>
+            Value:
+            <input type="text" id="toStorageValue"/><br/>
+        </section>
+        <section>
+            <button type="button" id="btnAdd">Add to storage</button>
+            <button type="button" id="btnRemove">Remove from storage</button>
+            <button type="button" id="btnClear">Clear storage</button>
+        </section>
+        <div id="storage">
+            <p>Current storage contents</p>
+        </div>
+    </body>
+</html>
