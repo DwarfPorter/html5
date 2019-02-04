@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script>
+        window.onload=function(){
+            document.getElementById("btnHide").onclick = function(){
+                if(document.getElementById("orange1").style.display == 'inline'){
+                    document.getElementById("orange1").style.display = 'none';
+                }
+                else{
+                    document.getElementById("orange1").style.display = 'inline';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="orange.jpg" id="orange1" style="position: relative; display: inline;"/>
+    <button type="button" id="btnHide">Show/Hide</button>
+</body>
+</html>
