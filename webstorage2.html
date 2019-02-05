@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            section{
+                margin-top: 15px;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                LoadFromStorage();
+                document.getElementById("btnSave").onclick = function(){
+                    var customer = new Object();
+                    customer.firstName = document.getElementById("firstName").value;
+                    customer.lastName = document.getElementById("lastName").value;
+                    customer.shirtSize = document.getElementById("shirtSize").value;
+                    localStorage.setItem("cart1", JSON.stringify(customer));
+                }
+
+                function LoadFromStorage(){
+                    var customer = JSON.parse(localStorage.getItem("cart1"));
+                    if (customer != null){
+                        document.getElementById("firstName").value = customer.firstName;
+                        document.getElementById("lastName").value = customer.lastName;
+                        document.getElementById("shirtSize").value = customer.shirtSize;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            First name:
+            <input type="text" id="firstName"/><br/>
+            Last name:
+            <input type="text" id="lastName"/><br/>
+            Shirt size:
+            <input type="text" id="shirtSize"/><br/>
+        </section>
+        <section>
+            <button type="button" id="btnSave">Add to storage</button>
+        </section>
+        <div id="storage">
+            <p>Current storage contents</p>
+        </div>
+    </body>
+</html>
