@@ -1,0 +1,10 @@
+CACHE MANIFEST
+CACHE
+page1.html
+page2.html
+
+NETWORK:
+login.html
+
+FALLBACK
+login.html fallback-login.html
